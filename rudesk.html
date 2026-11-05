@@ -46,9 +46,11 @@
         let pc_id = rudesk_info[1];
 
         document.getElementById("pctext").innerHTML = `Идет подключение к ПК №${pc_id}...`;
-        window.location = `rudesktop://${rudesk_id}`;
+        window.location.assign(`rudesktop://${rudesk_id}`);
 
-        window.close();
+        setTimeout(() => {
+            window.close();
+        }, 500);
     </script>
 </body>
 </html>
